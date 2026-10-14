@@ -23,14 +23,8 @@ Kịch bản sử dụng tài khoản kiểm thử đã đăng ký. Mỗi ngư�
 
 Ảnh cấu hình trong JMeter hiển thị Thread Group **Music library visitors** với các thuộc tính:
 
-| Thuộc tính | Giá trị trong Test Plan | Ý nghĩa |
-| --- | --- | --- |
-| Number of Threads (users) | `${__P(threads,20)}` | Số người dùng ảo; mặc định 20 |
-| Ramp-up period | `${__P(rampup,10)}` giây | Thời gian khởi chạy đủ số luồng; mặc định 10 giây |
-| Loop Count | Infinite | Lặp hành trình trong thời gian chạy |
-| Same user on each iteration | Bật | Giữ cùng người dùng và session cho các vòng lặp |
-| Specify Thread lifetime | Bật | Dừng theo Duration |
-| Duration | `${__P(duration,180)}` giây | Thời lượng mặc định 180 giây |
+<img width="959" height="545" alt="Screenshot 2026-10-14 180142" src="https://github.com/user-attachments/assets/95c0e78d-93ca-4356-b605-56a609f6b691" />
+
 
 Các giá trị `${__P(...)}` là giá trị mặc định của tham số JMeter, không nhất thiết là cấu hình thực tế của một lần chạy. Theo lệnh chạy đã cung cấp, lần chạy trong Summary Report dùng **120 luồng**, ramp-up **1 giây**, thời lượng cấu hình **15 giây**. Vì vậy cấu hình thực tế khác giá trị mặc định đang hiển thị trên ảnh Thread Group.
 
@@ -38,14 +32,8 @@ Các giá trị `${__P(...)}` là giá trị mặc định của tham số JMete
 
 Số liệu dưới đây được ghi lại từ ảnh Summary Report:
 
-| Request | Samples | Average (ms) | Min (ms) | Max (ms) | Error % |
-| --- | ---: | ---: | ---: | ---: | ---: |
-| GET login page | 120 | 4 | 2 | 8 | 0.00% |
-| POST login | 120 | 282 | 226 | 492 | 0.00% |
-| R01 Home page | 120 | 4 | 2 | 8 | 0.00% |
-| R02 Genre list | 120 | 9,291 | 1,482 | 16,757 | 0.00% |
-| R03 Search genres | 31 | 13,656 | 5,427 | 15,228 | 0.00% |
-| **TOTAL** | **511** | **3,078** | **2** | **16,757** | **0.00%** |
+<img width="959" height="599" alt="Screenshot 2026-10-14 180328" src="https://github.com/user-attachments/assets/2aec6b69-349f-46c9-82fa-ecaca8889493" />
+
 
 Thông lượng tổng trong ảnh khoảng **18.3 samples/giây**. Summary Report cũng hiển thị tốc độ nhận khoảng **107.92 KB/giây**, tốc độ gửi khoảng **4.68 KB/giây** và kích thước phản hồi trung bình khoảng **5,870.7 bytes**.
 
